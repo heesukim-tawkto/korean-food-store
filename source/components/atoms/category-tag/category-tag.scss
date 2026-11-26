@@ -1,0 +1,10 @@
+@use '@/scss/mixins' as *;
+
+.category-tag {
+    @include mono-text($font-size-xs, 600, true);
+    padding: 0.2rem $space-sm;
+    color: $color-text-primary;
+    background-color: $color-bg-tag;
+    border: 1px solid $color-border-medium;
+    border-radius: $radius-pill;
+}

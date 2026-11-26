@@ -1,0 +1,25 @@
+@forward 'variables';
+@use 'variables' as *;
+
+@mixin tablet {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
+    @content;
+  }
+}
+
+@mixin mono-text($size: $font-size-sm, $weight: 600, $uppercase: false) {
+  font-family: $font-mono;
+  font-size: $size;
+  font-weight: $weight;
+
+  @if $uppercase {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+}

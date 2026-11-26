@@ -1,0 +1,163 @@
+@use '@/scss/mixins' as *;
+
+.about-info {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $space-2xl $space-lg;
+  box-sizing: border-box;
+
+  &__header {
+    padding-bottom: $space-lg;
+    margin-bottom: $space-xl;
+    border-bottom: $border-active;
+  }
+
+  &__eyebrow {
+    @include mono-text($font-size-sm, 600, true);
+    margin: 0 0 $space-sm;
+    color: $color-text-secondary;
+  }
+
+  &__title {
+    margin: 0;
+    max-width: 22ch;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+    margin-bottom: $space-xl;
+
+    @include tablet {
+      grid-template-columns: 3fr 2fr;
+    }
+  }
+
+  &__story,
+  &__specs {
+    padding: $space-lg;
+    background-color: $color-bg-primary;
+    border: $border-thin;
+  }
+
+  &__label {
+    @include mono-text($font-size-xs, 600, true);
+    margin: 0 0 $space-md;
+    color: $color-text-secondary;
+  }
+
+  &__lead {
+    margin: 0 0 $space-md;
+    font-size: $font-size-lg;
+    font-weight: 600;
+    line-height: 1.45;
+    color: $color-text-primary;
+  }
+
+  &__body {
+    margin: 0 0 $space-xl;
+    font-size: 1.5rem;
+    line-height: 1.65;
+    color: $color-text-secondary;
+  }
+
+  &__cta {
+    @include mono-text($font-size-sm, 600, true);
+    display: inline-block;
+    padding: $space-md $space-lg;
+    color: $color-text-inverse;
+    background-color: $color-text-primary;
+    border: $border-active;
+    text-decoration: none;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+
+  &__list {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__row {
+    display: flex;
+    flex-direction: column;
+    gap: $space-xs;
+    padding: $space-md 0;
+    border-top: $border-thin;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: none;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+
+  &__dt {
+    @include mono-text($font-size-xs, 600, true);
+    color: $color-text-secondary;
+  }
+
+  &__dd {
+    @include mono-text($font-size-md, 600);
+    margin: 0;
+    color: $color-text-primary;
+  }
+
+  &__principles {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-md;
+
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  &__card {
+    padding: $space-lg;
+    background-color: $color-bg-primary;
+    border: $border-thin;
+    transition: border-color $transition-fast, background-color $transition-fast;
+
+    &:hover {
+      border-color: $color-border-strong;
+      background-color: $color-bg-subtle;
+    }
+  }
+
+  &__code {
+    @include mono-text($font-size-sm, 600);
+    display: block;
+    margin-bottom: $space-md;
+    color: $color-text-secondary;
+  }
+
+  &__card-title {
+    margin: 0 0 $space-sm;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+  }
+
+  &__card-desc {
+    margin: 0;
+    font-size: $font-size-md;
+    line-height: 1.6;
+    color: $color-text-secondary;
+  }
+}

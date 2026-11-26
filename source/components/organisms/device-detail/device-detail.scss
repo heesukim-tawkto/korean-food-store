@@ -1,0 +1,120 @@
+@use '@/scss/mixins' as *;
+
+.device-detail {
+  width: 100%;
+  max-width: $container-max-width;
+  margin: 0 auto;
+  padding: $space-2xl $space-lg;
+  box-sizing: border-box;
+
+  &__back {
+    @include mono-text($font-size-sm, 600, true);
+    display: inline-block;
+    margin-bottom: $space-xl;
+    color: $color-text-secondary;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-text-primary;
+    }
+  }
+
+  &__header {
+    padding-bottom: $space-lg;
+    margin-bottom: $space-xl;
+    border-bottom: 1px solid $color-border-strong;
+  }
+
+  &__meta {
+    display: flex;
+    align-items: center;
+    gap: $space-md;
+    margin-bottom: $space-md;
+  }
+
+  &__code {
+    @include mono-text($font-size-md, 600);
+    color: $color-text-secondary;
+  }
+
+  &__title {
+    margin: 0 0 $space-sm;
+    font-size: $font-size-xl;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+  }
+
+  &__tagline {
+    margin: 0;
+    font-size: $font-size-lg;
+    color: $color-text-secondary;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $space-xl;
+
+    @include tablet {
+      grid-template-columns: 2fr 1fr;
+    }
+  }
+
+  &__panel,
+  &__sidebar {
+    padding: $space-lg;
+    border: $border-thin;
+    background-color: $color-bg-primary;
+  }
+
+  &__label {
+    @include mono-text($font-size-xs, 600, true);
+    margin: 0 0 $space-sm;
+    color: $color-text-secondary;
+  }
+
+  &__description {
+    margin: 0 0 $space-xl;
+    font-size: 1.6rem;
+    line-height: 1.6;
+    color: $color-text-primary;
+  }
+
+  &__specs {
+    @include mono-text($font-size-md, 400);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: $space-sm;
+  }
+
+  &__spec-badge {
+    @include mono-text($font-size-md, 600);
+    margin: 0 0 $space-lg;
+    color: $color-text-primary;
+  }
+
+  &__price {
+    @include mono-text(2.4rem, 700);
+    margin: 0 0 $space-lg;
+    color: $color-text-primary;
+  }
+
+  &__cta {
+    @include mono-text($font-size-md, 600, true);
+    width: 100%;
+    padding: $space-md;
+    color: $color-text-inverse;
+    background-color: $color-text-primary;
+    border: $border-active;
+    cursor: pointer;
+    transition: opacity $transition-fast;
+
+    &:hover {
+      opacity: 0.85;
+    }
+  }
+}

@@ -1,0 +1,68 @@
+@use '@/scss/mixins' as *;
+
+.product-list-item {
+  display: flex;
+
+  &__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 20rem;
+    padding: $space-lg;
+    text-decoration: none;
+    color: $color-text-primary;
+    background-color: $color-bg-primary;
+    border: $border-thin;
+    box-sizing: border-box;
+    transition: border-color $transition-fast, background-color $transition-fast;
+
+    &:hover {
+      border-color: $color-border-strong;
+      background-color: $color-bg-subtle;
+
+      .product-list-item__arrow {
+        transform: translate(2px, -2px);
+      }
+    }
+  }
+
+  &__top,
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__code,
+  &__spec {
+    @include mono-text($font-size-sm, 400);
+    color: $color-text-secondary;
+  }
+
+  &__body {
+    margin: $space-xl 0;
+  }
+
+  &__name {
+    margin: 0 0 $space-sm;
+    font-size: $font-size-lg;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: $color-text-primary;
+  }
+
+  &__spec {
+    margin: 0;
+  }
+
+  &__price,
+  &__arrow {
+    @include mono-text($font-size-md, 600);
+    color: $color-text-primary;
+  }
+
+  &__arrow {
+    transition: transform $transition-fast;
+  }
+}

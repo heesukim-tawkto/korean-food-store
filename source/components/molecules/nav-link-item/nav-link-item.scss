@@ -1,0 +1,25 @@
+@use '@/scss/mixins' as *;
+
+.nav-link-item {
+  @include mono-text($font-size-md, 600, true);
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  padding: $space-sm $space-md;
+  color: $color-text-secondary;
+  text-decoration: none;
+  white-space: nowrap;
+  border-radius: $radius-pill;
+  transition: color $transition-fast, background-color $transition-fast;
+
+  &:hover {
+    color: $color-text-primary;
+    background-color: $color-bg-tag;
+  }
+
+  // Vue Router automatically adds this class when the URL matches `to`
+  &.router-link-exact-active {
+    color: $color-text-inverse;
+    background-color: $color-text-primary;
+  }
+}

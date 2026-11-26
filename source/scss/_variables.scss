@@ -1,0 +1,46 @@
+// Colors
+$color-bg-primary: #ffffff;
+$color-bg-subtle: #fafafa;
+$color-bg-tag: #f4f4f4;
+
+$color-text-primary: #111111;
+$color-text-secondary: #737373;
+$color-text-inverse: #ffffff;
+
+$color-border-subtle: #e5e5e5;
+$color-border-medium: #d4d4d4;
+$color-border-strong: #111111;
+
+$color-accent-red: #d71921;
+
+// Typography
+$font-sans: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', Roboto, sans-serif;
+$font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+$font-size-xs: 1.1rem;   // Tags, micro-labels
+$font-size-sm: 1.2rem;   // Eyebrows, badges
+$font-size-md: 1.4rem;   // Nav links, specs, prices
+$font-size-lg: 1.8rem;   // Card titles
+$font-size-xl: 3.2rem;   // Page headings
+
+// Spacing Scale
+$space-xs: 0.4rem;
+$space-sm: 0.8rem;
+$space-md: 1.6rem;
+$space-lg: 2.4rem;
+$space-xl: 3.2rem;
+$space-2xl: 4.8rem;
+
+// Borders & Radius
+$border-thin: 1px solid $color-border-subtle;
+$border-active: 1px solid $color-border-strong;
+$radius-none: 0px;
+$radius-pill: 999px;
+
+// Layout & Breakpoints
+$container-max-width: 120rem;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+// Transitions
+$transition-fast: 0.15s ease;

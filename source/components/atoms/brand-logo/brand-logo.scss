@@ -1,0 +1,49 @@
+@use '@/scss/mixins' as *;
+
+.brand-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+
+  &__mark {
+    @include mono-text($font-size-md, 800);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 5rem;
+    height: 5rem;
+    border: 0.2rem solid $color-border-strong;
+    border-radius: $radius-pill;
+    background-color: $color-bg-primary;
+    color: $color-text-primary;
+    letter-spacing: -0.02em;
+    flex-shrink: 0;
+  }
+
+  &__wordmark {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.1;
+  }
+
+  &__title {
+    font-size: 1.7rem;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    color: $color-text-primary;
+  }
+
+  &__subtitle {
+    @include mono-text($font-size-xs, 600, true);
+    letter-spacing: 0.16em;
+    color: $color-text-secondary;
+    margin-top: 0.2rem;
+  }
+
+  // Modifier for collapsed sidebar or tight mobile screens
+  &--compact {
+    gap: 0;
+  }
+}
